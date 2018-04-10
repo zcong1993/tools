@@ -20,7 +20,7 @@ func Str2int64(s string) (int64, error) {
 	return strconv.ParseInt(s, 10, 64)
 }
 
-// OutPut is helper func for writing pretty json data to std
+// Output is helper func for writing pretty json data to std
 func Output(val interface{}, err error) {
 	if err != nil {
 		os.Stderr.Write([]byte(err.Error()))
