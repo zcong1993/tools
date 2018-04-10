@@ -1,7 +1,5 @@
 # tools [![Go Report Card](https://goreportcard.com/badge/github.com/zcong1993/tools)](https://goreportcard.com/report/github.com/zcong1993/tools) [![CircleCI branch](https://img.shields.io/circleci/project/github/zcong1993/tools/master.svg)](https://circleci.com/gh/zcong1993/tools/tree/master)
 
-
-
 > simple tools by golang and aws lambda
 
 ## Usage
