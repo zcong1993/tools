@@ -18,3 +18,4 @@ jobs:
           name: build
           command: |
             make build
+            make build.cli
