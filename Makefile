@@ -9,4 +9,4 @@ build: generate
 
 build.cli: generate
 	@echo "====> Build tools cli"
-	@go build -ldflags "-X github.com/zcong1993/tools/cmd/main.GitCommit=\"$(COMMIT)\"" -o ./bin/tools ./cmd/main.go
+	@go build -o ./bin/tools ./cmd/main.go

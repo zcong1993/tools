@@ -12,8 +12,6 @@ import (
 )
 
 var (
-	// GitCommit is commit hash for version
-	GitCommit = ""
 	// Version is cli version
 	Version = "v0.1.0"
 )
@@ -46,8 +44,5 @@ func main() {
 
 func showVersion() {
 	version := fmt.Sprintf("%s version %s", colors.Cyan(app.Name), colors.Purple(Version))
-	if len(GitCommit) != 0 {
-		version += colors.Gray(fmt.Sprintf(" (%s)", GitCommit))
-	}
 	utils.LogPad(version)
 }
