@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/gost-c/gost-cli/colors"
 	"github.com/gost-c/gost-cli/utils"
+	"github.com/zcong1993/tools/md5"
 	"github.com/zcong1993/tools/resolver"
 	"github.com/zcong1993/tools/ulid"
 	utils2 "github.com/zcong1993/tools/utils"
@@ -24,6 +25,9 @@ var (
 	ulidCommand = app.Command("ulid", "sub command for ulid. ")
 	ulidNums    = ulidCommand.Arg("nums", "nums for ulid command. ").Required().Int64()
 
+	md5Command = app.Command("md5", "sub command for md5. ")
+	md5Input   = md5Command.Arg("input", "input string for md5 command. ").Required().String()
+
 	version = app.Command("version", "Show tools cli version.")
 )
 
@@ -39,6 +43,8 @@ func main() {
 			nums = 100
 		}
 		utils2.Output(ulid.GenUlids(nums), nil)
+	case md5Command.FullCommand():
+		utils2.Output(md5.GetMd5([]byte(*md5Input)), nil)
 	}
 }
 

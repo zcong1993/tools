@@ -18,6 +18,13 @@ $ curl https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/ulid?
 $ tools ulid 100
 ```
 
+### md5 hash
+```sh
+$ curl https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/md5?s=string4md5
+# cli
+$ tools md5 string4md5
+```
+
 ## License
 
 MIT &copy; zcong1993
