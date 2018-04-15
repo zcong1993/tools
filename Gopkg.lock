@@ -4,10 +4,7 @@
 [[projects]]
   branch = "master"
   name = "github.com/alecthomas/template"
-  packages = [
-    ".",
-    "parse"
-  ]
+  packages = [".","parse"]
   revision = "a0175ee3bccc567396460bf5acd36800cb10c49c"
 
 [[projects]]
@@ -42,11 +39,7 @@
 
 [[projects]]
   name = "github.com/gin-gonic/gin"
-  packages = [
-    ".",
-    "binding",
-    "render"
-  ]
+  packages = [".","binding","render"]
   revision = "d459835d2b077e44f7c9b453505ee29881d5d12d"
   version = "v1.2"
 
@@ -58,10 +51,7 @@
 
 [[projects]]
   name = "github.com/gost-c/gost-cli"
-  packages = [
-    "colors",
-    "utils"
-  ]
+  packages = ["colors","utils"]
   revision = "9d5c2b3f2bbd5485aeb53db3f494a8531d6db717"
   version = "v3.2.5"
 
@@ -84,6 +74,12 @@
   version = "v0.3.0"
 
 [[projects]]
+  branch = "master"
+  name = "github.com/skip2/go-qrcode"
+  packages = [".","bitset","reedsolomon"]
+  revision = "cf5f9fa2f0d847edb8e038db7ed975e239095e1a"
+
+[[projects]]
   name = "github.com/ugorji/go"
   packages = ["codec"]
   revision = "b4c50a2b199d93b13dc15e78929cfb23bfdf21ab"
@@ -93,7 +89,7 @@
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "3b87a42e500a6dc65dae1a55d0b641295971163e"
+  revision = "2281fa97ef7b0c26324634d5a22f04babdac8713"
 
 [[projects]]
   name = "gopkg.in/alecthomas/kingpin.v2"
@@ -116,6 +112,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "be85d14abd170e6c20051d5e18574788f10f69d681c138ec6b7011b1354fce8c"
+  inputs-digest = "bac339002471a9a1055427d7b2c01882990cfaf48bac656c171113fdb9e34532"
   solver-name = "gps-cdcl"
   solver-version = 1

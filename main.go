@@ -5,6 +5,7 @@ import (
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/zcong1993/tools/md5"
+	"github.com/zcong1993/tools/qrcode"
 	"github.com/zcong1993/tools/resolver"
 	"github.com/zcong1993/tools/ulid"
 	"github.com/zcong1993/tools/utils"
@@ -55,11 +56,31 @@ var md5Handler = func(c *gin.Context) {
 	})
 }
 
+var qrcodeHandler = func(c *gin.Context) {
+	s := c.Query("s")
+	if s == "" {
+		c.JSON(200, gin.H{
+			"error": "url should end with '?s=test'",
+		})
+		return
+	}
+	png, err := qrcode.GenQrcode(s)
+	if err != nil {
+		c.JSON(200, gin.H{
+			"error": err.Error(),
+		})
+		return
+	}
+	c.Header("Content-Type", "image/png")
+	c.Writer.Write(png)
+}
+
 func main() {
 	r := gin.Default()
 	r.Use(cors.Default())
 	r.GET("/dns", dnsHandler)
 	r.GET("/ulid", ulidHandler)
 	r.GET("/md5", md5Handler)
+	r.GET("/qrcode", qrcodeHandler)
 	r.Run(fmt.Sprintf(":%s", utils.GetEnvOrDefault("PORT", "8888")))
 }

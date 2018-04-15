@@ -25,6 +25,10 @@ $ curl https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/md5?s
 $ tools md5 string4md5
 ```
 
+### qrcode generator
+
+[https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/qrcode?s=https://google.com](https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/qrcode?s=https://google.com)
+
 ## License
 
 MIT &copy; zcong1993
