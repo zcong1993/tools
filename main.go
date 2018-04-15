@@ -9,6 +9,7 @@ import (
 	"github.com/zcong1993/tools/resolver"
 	"github.com/zcong1993/tools/ulid"
 	"github.com/zcong1993/tools/utils"
+	"github.com/danielkov/gin-helmet"
 )
 
 var dnsHandler = func(c *gin.Context) {
@@ -78,6 +79,7 @@ var qrcodeHandler = func(c *gin.Context) {
 func main() {
 	r := gin.Default()
 	r.Use(cors.Default())
+	r.Use(helmet.Default())
 	r.GET("/dns", dnsHandler)
 	r.GET("/ulid", ulidHandler)
 	r.GET("/md5", md5Handler)
