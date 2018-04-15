@@ -10,3 +10,9 @@ build: generate
 build.cli: generate
 	@echo "====> Build tools cli"
 	@go build -o ./bin/tools ./cmd/main.go
+
+release:
+	@echo "====> Build and release"
+	@go get github.com/goreleaser/goreleaser
+	@goreleaser
+.PHONY: release

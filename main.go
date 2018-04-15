@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"github.com/danielkov/gin-helmet"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/zcong1993/tools/md5"
@@ -9,7 +10,6 @@ import (
 	"github.com/zcong1993/tools/resolver"
 	"github.com/zcong1993/tools/ulid"
 	"github.com/zcong1993/tools/utils"
-	"github.com/danielkov/gin-helmet"
 )
 
 var dnsHandler = func(c *gin.Context) {
