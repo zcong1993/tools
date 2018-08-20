@@ -6,28 +6,36 @@
 
 ### dns resolver
 ```sh
-$ curl https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/dns?d=google.com
+$ curl https://tools.zcong.moe/dns?d=google.com
 # cli
 $ tools dns google.com
 ```
 
 ### ulid generator
 ```sh
-$ curl https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/ulid?n=10
+$ curl https://tools.zcong.moe/ulid?n=10
 # cli
 $ tools ulid 100
 ```
 
 ### md5 hash
 ```sh
-$ curl https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/md5?s=string4md5
+$ curl https://tools.zcong.moe/md5?s=string4md5
 # cli
 $ tools md5 string4md5
 ```
 
 ### qrcode generator
 
-[https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/qrcode?s=https://google.com](https://f48s21atqi.execute-api.ap-southeast-1.amazonaws.com/staging/qrcode?s=https://google.com)
+[https://tools.zcong.moe/qrcode?s=https://google.com](https://tools.zcong.moe/qrcode?s=https://google.com)
+
+## Deploy
+
+with awesome [now](https://zeit.co/now)
+
+```bash
+$ now zcong1993/tools -e GIN_MODE=release --alias your.custom.domain.com
+```
 
 ## License
 

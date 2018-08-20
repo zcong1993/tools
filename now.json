@@ -1,0 +1,9 @@
+{
+  "name": "tools",
+  "alias": [
+    "tools.zcong.moe"
+  ],
+  "env": {
+    "GIN_MODE": "release"
+  }
+}
